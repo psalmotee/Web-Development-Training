@@ -1,0 +1,203 @@
+/* Custom Font */
+@font-face {
+  font-family: "Brown";
+  font-style: normal;
+  font-weight: bold;
+  src: local("Brown-Bold"), url("./Fonts/Brown-Bold.otf") format("otf");
+}
+@font-face {
+  font-family: "Brown";
+  font-style: normal;
+  font-weight: light;
+  src: local("Brown-Light"), url("./Fonts/BrownLight\ Regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Brown";
+  font-style: normal;
+  font-weight: medium;
+  src: local("Brown-Medium"), url("./Fonts/BrownMedium\ Regular.ttf") format("ttf");
+}
+
+/* Gilroy Font */
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: bold;
+  src: local("Gilroy-Bold"), url("./Fonts/Gilroy-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: light;
+  src: local("Gilroy-Light"), url("/Fonts/Gilroy-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: medium;
+  src: local("Gilroy-Medium"), url("/Fonts/Gilroy-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: bold;
+  src: local("Gilroy-Bold"), url("/Fonts/fonts/Gilroy-Bold.woff") format("woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+  background-color: #f7fdfc;
+  color: #000b0a;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  overflow: hidden;
+  padding: 3rem 2rem;
+}
+
+/* header */
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
+.mobile {
+  line-height: 1.5;
+  font-weight: 100;
+}
+
+.desktop {
+  display: none;
+}
+
+/* Form Section */
+.form-section {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.form-row {
+  display: grid;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+label {
+  font-weight: 600;
+  color: #011c34;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #2ec4b6;
+}
+
+.register-btn {
+  background-color: #2ec4b6;
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.register-btn:hover {
+  background-color: #2bbea3;
+}
+
+.terms {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.terms a {
+  color: #2ec4b6;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .header {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    padding-right: 2.5rem;
+  }
+
+  .logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+    line-height: 1.5;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form-section {
+    padding: 2rem;
+  }
+}
